@@ -1,15 +1,16 @@
-import { Typography } from "@mui/material"
-import { CustomAppBar } from "./styles"
+import { Typography } from "@mui/material";
+import { CustomAppBar } from "./styles";
 
-
-const Header = () => {
-  return (
-    <CustomAppBar position="static">
-      <Typography variant="h5" >
-        Meu App de estudos da Material UI
-      </Typography>
-    </CustomAppBar>
-  )
+interface IHeaderProps {
+  pageTitle: string;
 }
 
-export default Header
+const Header = ({ pageTitle }: IHeaderProps) => {
+  return (
+    <CustomAppBar position='static'>
+      <Typography variant='h5'>{pageTitle}</Typography>
+    </CustomAppBar>
+  );
+};
+
+export default Header;

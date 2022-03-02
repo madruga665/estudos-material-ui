@@ -4,7 +4,7 @@ import { HomePageContainer } from "./styles";
 const HomePage = () => {
   return (
     <HomePageContainer>
-      <Header />
+      <Header pageTitle='Meu App de estudos da Material UI' />
     </HomePageContainer>
   );
 };
