@@ -1,6 +1,6 @@
-import BasicCard from "../../BasicCard";
-import Footer from "../../Footer";
-import Header from "../../Header";
+import BasicCard from "../../components/BasicCard";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import { CardContainer, HomePageContainer } from "./styles";
 
 const HomePage = () => {
