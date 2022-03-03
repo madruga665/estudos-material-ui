@@ -7,13 +7,15 @@ export const FooterStyles = styled("footer")`
   background: ${(props) => props.theme.palette.primary.main};
   color: ${(props) => props.theme.palette.primary.contrastText};
   height: 100px;
+  text-align: center;
+  padding: 15px;
 `;
 
 export const SocialIconsContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 15px;
+  margin-left: 15px;
   a {
     text-decoration: none;
     color: ${(props) => props.theme.palette.primary.contrastText};
