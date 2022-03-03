@@ -7,6 +7,7 @@ export const FooterStyles = styled("footer")`
   background: ${(props) => props.theme.palette.primary.main};
   color: ${(props) => props.theme.palette.primary.contrastText};
   height: 100px;
+  width: 100%;
   text-align: center;
   padding: 15px;
 `;
