@@ -2,45 +2,57 @@ import { TextField, Button } from "@mui/material";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 import Header from "../../components/Header";
-import useForm from "../../hooks/useForm";
 import { FormPageContainer } from "./styles";
+import Formik from "../../hooks/Formik";
 
 const FormPage = () => {
-  const { name, email, phone, address, handleSubmit, setName, setAddress, setEmail, setPhone } = useForm();
+  const { formik } = Formik();
 
   return (
     <FormPageContainer>
       <Header pageTitle='Formulário' />
-      <Form handleSubmit={handleSubmit}>
+      <Form handleSubmit={formik.handleSubmit}>
         <TextField
+          error={formik.errors.name ? true : false}
+          helperText={formik.errors.name}
+          margin='normal'
           id='name'
           label='Nome'
           variant='standard'
-          value={name}
-          onChange={(event) => setName(event.target.value)}
+          value={formik.values.name}
+          onChange={formik.handleChange}
         />
         <TextField
+          error={formik.errors.email ? true : false}
+          helperText={formik.errors.email}
+          margin='normal'
           id='email'
           label='Email'
           variant='standard'
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          value={formik.values.email}
+          onChange={formik.handleChange}
         />
         <TextField
+          error={formik.errors.phone ? true : false}
+          helperText={formik.errors.phone}
+          margin='normal'
           id='phone'
           label='Telefone'
           variant='standard'
-          value={phone}
-          onChange={(event) => setPhone(event.target.value)}
+          value={formik.values.phone}
+          onChange={formik.handleChange}
         />
         <TextField
+          error={formik.errors.address ? true : false}
+          helperText={formik.errors.address}
+          margin='normal'
           id='address'
           label='Endereço'
           variant='standard'
-          value={address}
-          onChange={(event) => setAddress(event.target.value)}
+          value={formik.values.address}
+          onChange={formik.handleChange}
         />
-        <Button type='submit' variant='contained'>
+        <Button sx={{ marginTop: "5rem" }} type='submit' variant='contained'>
           Enviar
         </Button>
       </Form>

@@ -5,5 +5,5 @@ export const FormContainer = styled("form")`
   flex-direction: column;
   border: 1px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 5px;
-  padding: 15px;
+  padding: 2.5rem;
 `;
