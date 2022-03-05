@@ -13,8 +13,8 @@ const FormPage = () => {
       <Header pageTitle='Formulário' />
       <Form handleSubmit={formik.handleSubmit}>
         <TextField
-          error={formik.errors.name ? true : false}
-          helperText={formik.errors.name}
+          error={formik.errors.name && formik.touched.name ? true : false}
+          helperText={formik.errors.name && formik.touched.name ? formik.errors.name : null}
           margin='normal'
           id='name'
           label='Nome'
@@ -23,8 +23,8 @@ const FormPage = () => {
           onChange={formik.handleChange}
         />
         <TextField
-          error={formik.errors.email ? true : false}
-          helperText={formik.errors.email}
+          error={formik.errors.email && formik.touched.email ? true : false}
+          helperText={formik.errors.email && formik.touched.email ? formik.errors.email : null}
           margin='normal'
           id='email'
           label='Email'
@@ -33,8 +33,8 @@ const FormPage = () => {
           onChange={formik.handleChange}
         />
         <TextField
-          error={formik.errors.phone ? true : false}
-          helperText={formik.errors.phone}
+          error={formik.errors.phone && formik.touched.phone ? true : false}
+          helperText={formik.errors.phone && formik.touched.phone ? formik.errors.phone : null}
           margin='normal'
           id='phone'
           label='Telefone'
@@ -43,8 +43,8 @@ const FormPage = () => {
           onChange={formik.handleChange}
         />
         <TextField
-          error={formik.errors.address ? true : false}
-          helperText={formik.errors.address}
+          error={formik.errors.address && formik.touched.address ? true : false}
+          helperText={formik.errors.address && formik.touched.address ? formik.errors.address : null}
           margin='normal'
           id='address'
           label='Endereço'
