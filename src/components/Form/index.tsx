@@ -1,4 +1,3 @@
-import React from "react";
 import { FormContainer } from "./styles";
 
 interface IFormProps {
