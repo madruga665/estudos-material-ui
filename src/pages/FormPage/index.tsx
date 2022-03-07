@@ -7,51 +7,53 @@ import Formik from "../../hooks/Formik";
 import Dropdown from "../../components/Dropdown";
 
 const FormPage = () => {
-  const { formik } = Formik();
+  const {
+    formik: { errors, touched, values, handleSubmit, handleChange },
+  } = Formik();
 
   return (
     <FormPageContainer>
       <Header pageTitle='Formulário' />
-      <Form handleSubmit={formik.handleSubmit}>
+      <Form handleSubmit={handleSubmit}>
         <TextField
           variant='standard'
-          error={formik.errors.name && formik.touched.name ? true : false}
-          helperText={formik.errors.name && formik.touched.name ? formik.errors.name : null}
           margin='normal'
+          error={errors.name && touched.name ? true : false}
+          helperText={errors.name && touched.name ? errors.name : null}
           id='name'
           label='Nome'
-          value={formik.values.name}
-          onChange={formik.handleChange}
+          value={values.name}
+          onChange={handleChange}
         />
         <TextField
           variant='standard'
-          error={formik.errors.email && formik.touched.email ? true : false}
-          helperText={formik.errors.email && formik.touched.email ? formik.errors.email : null}
           margin='normal'
+          error={errors.email && touched.email ? true : false}
+          helperText={errors.email && touched.email ? errors.email : null}
           id='email'
           label='Email'
-          value={formik.values.email}
-          onChange={formik.handleChange}
+          value={values.email}
+          onChange={handleChange}
         />
         <TextField
           variant='standard'
-          error={formik.errors.phone && formik.touched.phone ? true : false}
-          helperText={formik.errors.phone && formik.touched.phone ? formik.errors.phone : null}
           margin='normal'
+          error={errors.phone && touched.phone ? true : false}
+          helperText={errors.phone && touched.phone ? errors.phone : null}
           id='phone'
           label='Telefone'
-          value={formik.values.phone}
-          onChange={formik.handleChange}
+          value={values.phone}
+          onChange={handleChange}
         />
         <TextField
           variant='standard'
-          error={formik.errors.address && formik.touched.address ? true : false}
-          helperText={formik.errors.address && formik.touched.address ? formik.errors.address : null}
           margin='normal'
+          error={errors.address && touched.address ? true : false}
+          helperText={errors.address && touched.address ? errors.address : null}
           id='address'
           label='Endereço'
-          value={formik.values.address}
-          onChange={formik.handleChange}
+          value={values.address}
+          onChange={handleChange}
         />
         <Dropdown />
         <Button sx={{ marginTop: "5rem" }} type='submit' variant='contained'>
