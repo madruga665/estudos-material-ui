@@ -1,5 +1,5 @@
 import { CssBaseline } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material";
 import MyRoutes from "./routes";
 import { Theme } from "./styles/Theme";
 
