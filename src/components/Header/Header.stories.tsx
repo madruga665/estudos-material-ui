@@ -1,11 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Header from ".";
+import HeaderDocs from './HeaderDocs.mdx';
 
 export default {
   title: "Components/Header",
   component: Header,
   parameters: {
     layout: "fullscreen",
+    docs: {
+      page: HeaderDocs
+    }
   },
 } as ComponentMeta<typeof Header>;
 
