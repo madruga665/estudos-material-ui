@@ -1,13 +1,16 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import BasicCard from ".";
-
+import BasicCardDocs from "./BasicCardDocs.mdx";
 
 export default {
   title: "Components/BasicCard",
   component: BasicCard,
   parameters: {
     layout: "fullscreen",
+    docs: {
+      page: BasicCardDocs
+    }
   },
 } as ComponentMeta<typeof BasicCard>;
 
