@@ -1,8 +1,8 @@
 import { CustomSelect, StyledOption } from "./styles";
 
-export default function Dropdown() {
+export default function Dropdown({ onChange, id }: any) {
   return (
-    <CustomSelect>
+    <CustomSelect onChange={(e) => onChange(id, e)}>
       {countries.map((c) => (
         <StyledOption key={c.code} value={c.code}>
           <img

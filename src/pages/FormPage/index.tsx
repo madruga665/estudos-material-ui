@@ -8,7 +8,7 @@ import Dropdown from "../../components/Dropdown";
 
 const FormPage = () => {
   const {
-    formik: { errors, touched, values, handleSubmit, handleChange },
+    formik: { errors, touched, values, handleSubmit, handleChange, setFieldValue },
   } = Formik();
 
   return (
@@ -55,7 +55,7 @@ const FormPage = () => {
           value={values.address}
           onChange={handleChange}
         />
-        <Dropdown />
+        <Dropdown id='ddi' onChange={setFieldValue} />
         <Button sx={{ marginTop: "5rem" }} type='submit' variant='contained'>
           Enviar
         </Button>
